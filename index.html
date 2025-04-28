@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google</title>
+  <link rel="icon" href="./logo.png" type="image/png">
+  <style>
+    body {
+      background: url('google.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #searchbar {
+      width: 700px;
+      height: 500px;
+      background: url('searchbar.png') no-repeat center center;
+      background-size: contain;
+      cursor: text;
+      position: relative;
+    }
+    #text {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 0;
+      color: black;
+      text-align: center;
+      transition: font-size 2s;
+    }
+  </style>
+</head>
+<body>
+  <div id="searchbar">
+    <div id="text">192.684.1.1, Philadelphia PA get hacked lol</div>
+  </div>
+  <audio id="sound" src="fart.mp3"></audio>
+  <script>
+    const searchbar = document.getElementById('searchbar');
+    const text = document.getElementById('text');
+    const sound = document.getElementById('sound');
+
+    searchbar.addEventListener('click', () => {
+      text.style.display = 'block';
+      text.style.fontSize = '100px';
+      sound.play();
+      setTimeout(() => {
+        while (1) {
+          location.reload(1);
+        }
+      }, 2000); 
+    });
+  </script>
+</body>
+</html>
+
+
